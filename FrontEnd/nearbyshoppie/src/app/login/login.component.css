@@ -1,0 +1,54 @@
+
+.reg-nav
+{
+    text-align: center;
+    color: #09cc00;
+}
+.reg-nav h4{
+    font-weight: 700;
+}
+.reg-nav-buyer
+{
+    padding: 30px;
+    background: #b4cc00;
+    height: 200px;
+}
+.reg-nav-seller
+{
+    padding: 30px;
+    background: #e29e00;
+    height: 200px;
+}
+
+.reg-nav-buyer h5{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+.reg-nav-seller h5{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+} 
+.reg-nav-seller p{
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+}
+.reg-nav-buyer p{
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+}
+#reg-btn{
+    border: 1px solid white;
+    background: #ff000000;
+    color: white;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+.log-form{
+    vertical-align: middle;
+    height: auto;
+    top: 17px;
+}

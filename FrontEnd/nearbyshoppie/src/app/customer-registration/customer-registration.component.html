@@ -1,0 +1,46 @@
+<div class="sub-main">
+    <div class="row sub-nav">
+        <div class="sub-title">
+            <h3 >Customer Registration</h3>
+        </div>
+    </div>
+    <div class="sub-body row">
+        <div class="col-md-4 log-form"></div>
+        <div class="col-md-4 log-form">
+            <form (ngSubmit)="addUser()">
+                <div class="input-field">
+                    <label for="">Name* </label><br>
+                    <input type="text" name="name"  [(ngModel)]="user.name" required>
+                </div>
+                <div class="input-field">
+                    <label for="">Mobile* </label><br>
+                    <input type="text" name="mobile" [(ngModel)]="user.mobile" required>
+                </div>
+                <div class="input-field">
+                    <label for="">E-mail </label><br>
+                    <input type="text" name="email" [(ngModel)]="user.email">
+                </div>
+                <div class="input-field">
+                    <label for="">Pincode* </label><br>
+                    <input type="text" name="pinCode" [(ngModel)]="user.pinCode" required>
+                </div>
+                <div class="input-field">
+                    <label for="">Location/house no./streat* </label><br>
+                    <input type="text" name="location" [(ngModel)]="user.location" required>
+                </div>
+                <div class="input-field">
+                    <label for="">Password* </label><br>
+                    <input type="text" name="password" [(ngModel)]="user.password" required>
+                </div>
+                <div class="input-field">
+                    <label for="">User </label><br>
+                    <input type="text" name="usertype" value="" [(ngModel)]="user.userType" disabled >
+                </div>
+                <div class="input-field">
+                    <button type="submit" >Register</button>
+                </div>
+            </form>  
+        </div>
+        <div class="col-md-4 log-form"></div>
+    </div>
+</div>

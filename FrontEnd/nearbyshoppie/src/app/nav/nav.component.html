@@ -1,0 +1,21 @@
+<div>
+    <div class="main-nav">
+      <div class="container center">
+        <div class="row   ">
+  
+          <nav class="navbar">
+            <a href="#" class="navbar-brand" id="logo">NearbyShoppie</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav" *ngIf=usersService.logButton() >
+                <a class="nav-item nav-link active" id="main-menu-a"  *ngIf=!usersService.loggedIn() routerLink="/shops">Shops<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" id="main-menu-a" href="#" *ngIf=usersService.logButton() routerLink="/bill">Orders</a>
+                <button class="btn" style="float: right;" (click)=usersService.logout()>Logout</button>
+                
+              </div>
+            </div>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+  </div>

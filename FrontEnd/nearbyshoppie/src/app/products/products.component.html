@@ -1,0 +1,89 @@
+<div class="sub-main">
+    <!-- nav -->
+    <div class="row sub-nav">
+      <div class="sub-title">
+        <h3>{{shopName}}</h3>
+      </div>
+      <div class="bucket-div" *ngIf=usersService.loggedIn()>
+        <a routerLink="/addproduct" id="bucket"> Add Product</a>
+      </div>
+      <div class="bucket-div" *ngIf=!usersService.loggedIn()>
+        <a (click)='bill()' id="bucket"> Basket</a>
+      </div>
+    </div>
+    <!-- <app-bill *ngIf='display'></app-bill> -->
+<!-- billing -->
+    <div id="my-bill" class="bill" *ngIf='display'>
+      <div class="bill-content">
+        <div class="bill-header">
+          <span id="bill-close" class="close" (click)='billHide()'>&times;</span>
+          <h2>{{shop}}</h2>
+        </div>
+        <div class="bill-body">
+          <table style="width: 100%;">
+            <tr>
+              <th style="width: 50%;">Product</th>
+              <th style="width: 30%;">Quantity</th>
+              <th style="width: 20%;">Price</th>
+            </tr>
+          </table>
+          <table style="width: 100%;" *ngFor='let item of bd'>
+            <tr>
+              <td style="width: 50%;">{{item.productName}}</td>
+              <td style="width: 30%;">{{item.quantity}}</td>
+              <td style="width: 20%;">{{item.price}}</td>
+            </tr>
+          </table>
+          <table style="width: 100%;">
+            <tr>
+              <td style="width: 50%;"></td>
+              <th style="width: 30%;">Total Price: </th>
+              <th style="width: 20%;">{{total}}</th>
+            </tr>
+          </table>
+        </div>
+        <div class="bill-footer">
+          <button id="buy" style="color: white; background-color: rgb(223, 110, 17);" (click)='proceed()'>Buy</button>
+        </div>
+      </div>
+    </div>
+<!-- billing -->
+    <!-- shopping body -->
+    <div class="sub-body row">
+      <div class="shopping-category col-md-2">
+        <a *ngFor='let category of categoryList'>
+          <div class="s-c-list" (click)="categorizing(category)">
+          <p>{{category}}</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- product listing -->
+      <div class="product-list col-md-10 ">
+        <div class="p-l-title">
+          <p>{{categoryName}}</p>
+        </div>
+        <div class="row">
+          <div class="product-item col-md-2" *ngFor='let product of catProducts'>
+            <div >
+              <img class="img-fluid" src="data:image/png;base64,{{product.image}}">
+            </div>
+            <div>
+              <h5 >{{product.productName}} {{product.quantity}}{{product.unit}}</h5>
+              <p id="p-price">₹{{product.price}}</p>
+              <p id="p-stock">Stock:{{product.stock}}</p>
+              <div class="p-quantity" *ngIf=!usersService.loggedIn()>
+                <input class="p-quantity-input" id="{{product.productName}}" type="number" name="{{product.productName}}" value="1" min="1" max="{{product.stock}}">
+                <button id="p-quantity-btn" (click)=addToBill(product)>Add Item</button>
+              </div>
+              <!-- updation area -->
+              <div class="row" *ngIf=usersService.loggedIn()>
+                <div class="cal-md-5 remove-button" (click)="removeProduct(product._id)">Remove</div>
+                <div class="cal-md-5 edit-button" (click)="updateProduct(product._id)" >Edit</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

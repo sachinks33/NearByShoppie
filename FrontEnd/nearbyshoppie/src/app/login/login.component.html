@@ -1,0 +1,46 @@
+<div class="sub-main">
+    <div class="row sub-nav">
+        <div class="sub-title">
+            <h3 >Welcome</h3>
+        </div>
+    </div>
+    <div class="sub-body row">
+        
+        <div class="col-md-4 log-form">
+            <div class="reg-nav">
+                <h4>Login</h4>
+            </div>
+            <form (ngSubmit)="onLogin()">
+                <div class="input-field">
+                    <label for="" >Mobile number: </label><br>
+                    <input type="text" name="mobile" [(ngModel)]="logCred.mobile" required>
+                </div>
+                <div class="input-field">
+                    <label for="">Password: </label><br>
+                    <input type="text" name="password" [(ngModel)]="logCred.password" required>
+                </div>
+                <div class="input-field">
+                    <button type="submit">Login</button>
+                </div>
+            </form>  
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="reg-nav">
+                    <p>New to NearByShoppie?</p>
+                    <h4>Register Now</h4>
+                </div>
+                <div class="col-md-6 reg-nav-buyer">
+                    <h5>Buyer</h5>
+                    <p>Get access to do shopping from near by shops</p>
+                    <button routerLink="/c-registeration" id="reg-btn">Register</button>
+                </div>
+                <div class="col-md-6 reg-nav-seller">
+                    <h5> Merchant</h5>
+                    <p>Get access to your online rack</p>
+                    <button routerLink="/m-registeration" id="reg-btn">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

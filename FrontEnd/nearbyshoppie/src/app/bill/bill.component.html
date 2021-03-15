@@ -1,0 +1,64 @@
+<div class="sub-main">
+  <div class="row sub-nav">
+      <div class="sub-title">
+          <h3>{{shopName}}</h3>
+      </div>
+      <div class="bucket-div">
+        <a routerLink="/products" id="bucket">Products</a>
+      </div>
+  </div>
+  <div class="sub-body row">
+    <div style="margin-left:15px">
+      <h4>Orders</h4>
+    </div>
+      <div class="col-md-4" *ngFor='let bill of bills'>
+          <div class="shop-list">
+              <div class="shop-list-detail">
+                  <i class="fab fa-accessible-icon"></i>
+                  <h5>{{bill.shopName}}</h5>
+                  <p>Location Code: {{bill.pinCode}}</p>
+                  <div class="bill-area">
+                    <table style="width: 100%;">
+                      <tr>
+                        <th style="width: 50%;">Product</th>
+                        <th style="width: 30%;">Quantity</th>
+                        <th style="width: 20%;">Price(Rs.)</th>
+                      </tr>
+                    </table>
+                    <table style="width: 100%;" *ngFor='let item of bill.bill'>
+                      <tr>
+                        <td style="width: 50%;">{{item.productName}}</td>
+                        <td style="width: 30%;">{{item.quantity}}</td>
+                        <td style="width: 20%;">{{item.price}}</td>
+                      </tr>
+                    </table>
+                    <table style="width: 100%;">
+                      <tr>
+                        <td style="width: 50%;"></td>
+                        <th style="width: 30%;">Total Price: </th>
+                        <th style="width: 20%;">Rs. {{bill.total}} /-</th>
+                      </tr>
+                    </table>
+                  </div>
+                  <p>Status:{{bill.status}}</p>
+                  <div *ngIf='adminLoggedIn()'>
+                    <p style="float: left;" >Update status: </p>
+                    <select  name="status" id="{{bill._id}}" (change)='updateStatus(bill._id)'>
+                      <option value="bill.status">{{bill.status}}</option>
+                      <option value="Packing">Packing</option>
+                      <option value="Ready to deliver">Ready to deliver</option>
+                      <option value="Completed">Completed</option>
+                    </select>
+                  </div>
+                  <p >Order Details:</p>
+                  <div class="delivery-det">
+                    <p>{{bill.customerName}}</p>
+                    <p>{{bill.customerMobile}}</p>
+                    <p>{{bill.customerLocation}}</p>
+                  </div>
+                  <p></p>
+              </div>
+          </div>
+      </div>   
+  </div>
+</div>

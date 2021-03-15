@@ -1,0 +1,24 @@
+<div class="sub-main">
+    <div class="row sub-nav">
+        <div class="sub-title">
+            <h3 >Near by shops</h3>
+        </div>
+    </div>
+    <div class="sub-body row">
+        <div class="col-md-3" *ngFor= 'let shop of shops'>
+            <div class="shop-list">
+                <div class="shop-list-detail">
+                    <i class="fab fa-accessible-icon"></i>
+                    <h5>{{shop.name}}</h5>
+                    <p>Supermarkert</p>
+                    <p>{{shop.location}}</p>
+                    <p>{{shop.pinCode}}</p>
+                </div>
+                <div class="shop-list-btn">
+                    <!-- <button (click)="shopProduct('{{shop.name}}')">Shop now</button> -->
+                    <button (click)="currentShop(shop.name)" >Shop now</button>
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>

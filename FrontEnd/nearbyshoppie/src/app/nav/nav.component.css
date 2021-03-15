@@ -1,0 +1,43 @@
+.main-nav{
+    background-color:#24c800 ;
+}
+#logo{
+    color: #f1f1f1;
+    font-weight: 800;
+}
+h2{
+    margin: 10px 0px;
+}
+#main-menu-a
+{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.center{
+    margin: auto;
+    width: 100%;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 0px solid transparent;
+}
+.navbar-nav {
+    float: right;
+    margin: 20px 0px;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 25px 15px;
+    font-size: 22px;
+    line-height: 0px;
+    margin: 5px 0px;
+}
+.btn{
+    margin: 0px 15px;
+    padding: 5px 15px;
+}

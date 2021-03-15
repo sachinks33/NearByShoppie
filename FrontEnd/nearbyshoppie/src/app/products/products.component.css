@@ -1,0 +1,155 @@
+
+.edit-button
+{
+    width: 50%;
+    background-color: rgb(236, 201, 0);
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 3px;
+    font-size: 12px;
+}
+.remove-button
+{
+    width: 50%;
+    background-color: rgb(236, 47, 0);
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 3px;
+    font-size: 12px;
+}
+
+/* shop products */
+
+
+.shopping-category{
+    padding: 5px;
+    background-color: white;
+}
+.s-c-list{
+    padding: 5px;
+    border-bottom: 1px solid #ececec;
+}
+a{
+    text-decoration: none;
+}
+
+.product-list{
+    padding: 5px;
+    background-color: white;
+    border-left: 5px solid #e8e8e8;
+}
+.p-l-title{
+    padding: 5px;
+}
+.product-item{
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #e8e8e8;
+}
+.img-fluid{
+    width: 100%;
+    height: 150px;
+}
+
+.p-quantity{
+    
+}
+
+#quantity
+{
+
+    width: 40%;
+    font-size: 12px;
+}
+#p-quantity-btn{
+
+    margin-left: 5px;
+    width: auto;
+    font-size: 12px;
+}
+.p-quantity-input{
+    float: left;
+    line-height: 17px;
+}
+#p-price{
+    font-weight: 600;
+    font-size: 12px;
+}
+#p-stock{
+    color: rgb(20, 161, 20);
+}
+
+/* bill css */
+.bill {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* bill Content */
+  #id{
+      background-color: rgb(36, 35, 35);
+  }
+  .bill-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .bill-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .bill-body {padding: 2px 16px;}
+  
+  .bill-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }

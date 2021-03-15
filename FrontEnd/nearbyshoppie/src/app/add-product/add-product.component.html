@@ -1,0 +1,63 @@
+<div class="sub-main">
+    <div class="row sub-nav">
+        <div class="sub-title">
+          <h3>{{shopName}}</h3>
+        </div>
+        <div class="bucket-div">
+          <a routerLink="/addproduct" id="bucket"> Add Product</a>
+        </div>
+    </div>
+    <div class="sub-body row">
+        <div class="col-md-4 log-form"></div>
+        <div class="col-md-4 log-form">
+            
+            <form (ngSubmit)="addProducts()" method="POST" enctype="multipart/form-data">
+                <div class="input-field">
+                    <label for="">Product Name* </label><br>
+                    <input type="text" name="name" [(ngModel)]="product.productName" required>
+                </div>
+                <div class="input-field">
+                    <label for="">Category* </label><br>
+                    <select name="category" id="cat" [(ngModel)]="product.category" required>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Bakery">Bakery</option>
+                        <option value="Cleaning & Household">Cleaning & Household</option>
+                        <option value="Egg,Meet,Fish">Egg,Meet,Fish</option>
+                        <option value="Baby care">Baby care</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="">Price* </label><br>
+                    <input type="text" name="price" [(ngModel)]="product.price" >
+                </div>
+                <div class="input-field">
+                    <label for="">Quantity/pack* </label><br>
+                    <input type="text"  name="quantity" [(ngModel)]="product.quantity" >
+                </div>
+                <div class="input-field">
+                    <label for="">Unit </label><br>
+                    <select name="unit" id="unit" [(ngModel)]="product.unit" required>
+                        <option value="kg">KG</option>
+                        <option value="g">Gram</option>
+                        <option value="L">Liter</option>
+                        <option value="ml">Milliliter</option>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="">Stock* </label><br>
+                    <input type="number" name="stock" [(ngModel)]="product.stock" >
+                </div>
+                <div class="input-field">
+                    <label for="">Image* </label><br>
+                    <input type="file" name="productImage" (change)="selectImage($event)" >
+                </div>
+                <div class="input-field">
+                    <button type="submit">Add Product</button>
+                </div>
+            </form>  
+        </div>
+        <div class="col-md-4 log-form"></div>
+    </div>
+</div>

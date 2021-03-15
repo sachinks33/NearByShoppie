@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+    background-color:#ffffff;
+}
+.h1, .h2, .h3, h1, h2, h3,p,div{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 12px;
+}
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/* sub page */
+.sub-main{
+    background-color: white;
+    margin: 0px 20px;
+    border-radius: 3px;
+}
+.sub-body{
+    background-color: #eeeeee;
+    padding: 10px;
+}
+.sub-nav{
+    margin: 0px 10px;
+    padding: 15px 0px;
+}
+.sub-title
+{
+    float: left;
+}
+.sub-title h3
+{
+    font-weight: bold;
+    color: #24c800;
+}
+
+/* form */
+.input-field
+{
+    margin: 10px 0px;
+}
+.input-field label
+{
+    margin: 0px 5px;
+    font-weight: 100;
+    width: 100%;
+}
+.input-field input
+{
+    margin: 0px 5px;
+    width: 100%;
+}
+.input-field button
+{
+    margin: 10px 5px;
+    width: 100%;
+    background-color:#7b7b7b;
+    border: none;
+    padding: 6px;
+    color: white;
+    border-radius: 3px;
+}
+.input-field a
+{
+    margin: 0px 5px;
+    width: 100%;
+}
+#bucket{
+    float: right;
+    padding: 0px 10px;
+}

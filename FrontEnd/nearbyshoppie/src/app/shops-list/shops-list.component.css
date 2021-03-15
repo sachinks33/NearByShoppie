@@ -1,0 +1,33 @@
+.shop-list{
+    padding: 0px;
+    background:#ffffff;
+    margin: 10px 0px;
+}
+.shop-list-detail{
+    padding: 10px 20px;
+}
+.shop-list-detail h5{
+    font-size: 18px;
+    color: #ecb000;
+}
+.shop-list-detail p{
+    color: #888888;
+    font-weight: 100;
+}
+.shop-list-btn{
+    width: 100%;
+}
+.shop-list-btn button{
+    background: white;
+    width: 100%;
+    border: none;
+    color: #09cc00;
+    padding: 10px;
+    border-bottom: 2px solid #09cc00;
+}
+.shop-list-btn button:hover{
+    transition-duration: .6s;
+    background: #09cc00;
+    color: white;
+    border-bottom: 2px solid #09cc00;
+}
